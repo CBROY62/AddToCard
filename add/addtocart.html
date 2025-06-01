@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="addtocart.css">
+</head>
+<body>
+    
+
+    <div class="mainbox">
+    <div class="formbar">
+        <button class="firstbtn" onclick="
+            numberofitem++;
+            document.querySelector('.numberofitems').innerText = ` your bage has ${numberofitem} item`;
+            ">add to cart</button>
+        <button class="secondbtn" onclick="
+        numberofitem--;
+        document.querySelector('.numberofitems').innerText = ` your bage has ${numberofitem} item`;
+        ">movetoitem</button>
+        <button class="multiplayadd" onclick="
+        numberofitem = numberofitem + 2;
+        document.querySelector('.numberofitems').innerText = ` your bage has ${numberofitem} item`;
+        "> add 1+1 item</button>
+       
+    </div>
+    <h1 class="numberofitems"></h1>
+    <button class="finalAmountsubmit" onclick="
+      document.querySelector('.finalvalue').innerText = ` submit total item ${numberofitem} in the bage`;
+    ">submit btn</button>
+    <h2 class="finalvalue"></h2>
+</div>
+    
+    <script>
+        let numberofitem = 0;
+        document.querySelector('.numberofitems').innerText = `your bage has ${numberofitem} item`;
+        
+        document.querySelector('.finalvalue').innerText = ` submit total item ${numberofitem} in the bage`;
+
+    </script>
+</body>
+</html>
